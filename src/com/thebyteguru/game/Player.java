@@ -15,7 +15,7 @@ public class Player extends Entity {
 
 	public static final int	SPRITE_SCALE		= 16;
 	public static final int	SPRITES_PER_HEADING	= 1;
-
+  //обьекты перечесления 
 	private enum Heading {
 		NORTH(0 * SPRITE_SCALE, 0 * SPRITE_SCALE, 1 * SPRITE_SCALE, 1 * SPRITE_SCALE),
 		EAST(6 * SPRITE_SCALE, 0 * SPRITE_SCALE, 1 * SPRITE_SCALE, 1 * SPRITE_SCALE),
