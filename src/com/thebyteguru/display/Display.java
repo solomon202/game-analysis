@@ -13,13 +13,16 @@ import java.util.Arrays;
 import javax.swing.JFrame;
 
 import com.thebyteguru.IO.Input;
-
+   
 public abstract class Display {
-
+	// дисплей имеет 
 	private static boolean			created	= false;
+	//Это верхний контейнер, на котором строятся графические интерфейсы
 	private static JFrame			window;
+	//«чистый лист», на котором вы можете рисовать фигуры
 	private static Canvas			content;
-
+ //класс  основным инструментом для представления изображений в памяти работа с цветом 
+	// После загрузки изображения в память с ним можно работать как с единым объектом
 	private static BufferedImage	buffer;
 	private static int[]			bufferData;
 	private static Graphics			bufferGraphics;
@@ -64,6 +67,7 @@ public abstract class Display {
    //метод меняе на новую картинку кадра получая картинку 
 	public static void swapBuffers() {
 		Graphics g = bufferStrategy.getDrawGraphics();
+		//Рисует другое изображение на текущем с возможностью масштабирования и позиционирования
 		g.drawImage(buffer, 0, 0, null);
 		bufferStrategy.show();
 	}
