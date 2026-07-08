@@ -1,7 +1,4 @@
-/**
- * @author Initial version made by https://github.com/TheByteGur
- * @author Further developed by https://github.com/Wedas/
- */
+
 
 package com.tank.level;
 
@@ -21,7 +18,7 @@ import com.thebyteguru.graphics.Sprite;
 import com.thebyteguru.graphics.SpriteSheet;
 import com.thebyteguru.graphics.TextureAtlas;
 import com.thebyteguru.utils.Utils;
-
+//уровень 
 public class Level {
 	public static final int		TILE_SCALE				= 8;
 	//размер плитки с права экрана 

@@ -10,7 +10,7 @@ import com.thebyteguru.IO.Input;
 import com.thebyteguru.graphics.Sprite;
 import com.thebyteguru.graphics.SpriteSheet;
 import com.thebyteguru.graphics.TextureAtlas;
-
+//игрок имет размер картинку движение новую отрисовку 
 public class Player extends Entity {
 
 	public static final int	SPRITE_SCALE		= 16;
@@ -45,6 +45,7 @@ public class Player extends Entity {
 		super(EntityType.Player, x, y);
 
 		heading = Heading.NORTH;
+		//ключь значение какую картинку при нажатии кнопки 
 		spriteMap = new HashMap<Heading, Sprite>();
 		this.scale = scale;
 		this.speed = speed;
@@ -57,7 +58,7 @@ public class Player extends Entity {
 		}
 
 	}
-
+//двигаем 
 	@Override
 	public void update(Input input) {
 
@@ -94,7 +95,7 @@ public class Player extends Entity {
 		y = newY;
 
 	}
-
+//создали картинку 
 	@Override
 	public void render(Graphics2D g) {
 		spriteMap.get(heading).render(g, x, y);

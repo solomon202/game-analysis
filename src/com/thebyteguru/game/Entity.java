@@ -10,7 +10,7 @@ public abstract class Entity {
 
 	protected float			x;
 	protected float			y;
-
+	//тип обьекта игрок и его положение через наследование в классе игрок 
 	protected Entity(EntityType type, float x, float y) {
 		this.type = type;
 		this.x = x;

@@ -12,7 +12,7 @@ import java.awt.GraphicsDevice;
 import java.awt.GraphicsEnvironment;
 import java.awt.Transparency;
 import java.awt.image.BufferedImage;
-
+//плитка 
 public class Tile {
 
 	private BufferedImage	image;
