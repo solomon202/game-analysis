@@ -41,6 +41,7 @@ public class Game implements Runnable {
 		//создаем отдельные параметры для методов
 		input = new Input();
 		Display.addInputListener(input);
+		//создается класс где есть сылка на картинку и и метод где вырезается конкретный кусок 
 		atlas = new TextureAtlas(ATLAS_FILE_NAME);
 		player = new Player(300, 300, 2, 3, atlas);
 		lvl = new Level(atlas, stage);

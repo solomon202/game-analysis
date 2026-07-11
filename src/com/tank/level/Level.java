@@ -20,6 +20,8 @@ import com.thebyteguru.graphics.TextureAtlas;
 import com.thebyteguru.utils.Utils;
 //уровень 
 public class Level {
+	//имеет данные виде цифр
+	//размер плитки 
 	public static final int		TILE_SCALE				= 8;
 	//размер плитки с права экрана 
 	public static final int		TILE_IN_GAME_SCALE		= 3;
@@ -29,7 +31,8 @@ public class Level {
 	public static final int		BONUS_DURATION			= 10000;
 
 	private static final int[]	ARRAY_TO_RESTORE_EAGLE	= new int[20];
-
+//создает или  обращается к уже имеющимся классам
+	
 	private Integer[][]			tileMap;
 	private Map<TileType, Tile>	tiles;
 	private List<Point>			grassCords;
@@ -43,7 +46,7 @@ public class Level {
 	private boolean				eagleProtected;
 //	private InfoPanel			infoPanel;
 	private boolean				eagleAlive;
-
+//данные это цыфры получили сылку на класс текстуры и цыфру 1 на уравень
 	public Level(TextureAtlas atlas, int stage) {
 		tiles = new HashMap<>();
 		count = 0;
@@ -52,7 +55,7 @@ public class Level {
 		eagleProtected = false;
 //		infoPanel = new InfoPanel(atlas, stage);
 		eagleAlive = true;
-
+//дает параметры вырезания картинки 
 	    tiles.put(TileType.BRICK, new Tile(atlas.cut(32 * TILE_SCALE, 0 * TILE_SCALE, TILE_SCALE, TILE_SCALE),
 	        	TILE_IN_GAME_SCALE, TileType.BRICK));
 		tiles.put(TileType.METAL, new Tile(atlas.cut(32 * TILE_SCALE, 2 * TILE_SCALE, TILE_SCALE, TILE_SCALE),
@@ -86,7 +89,7 @@ public class Level {
 						TileType.DOWN_RIGHT_DEAD_EAGLE));
 		tiles.put(TileType.OTHER_WATER, new Tile(atlas.cut(33 * TILE_SCALE, 10 * TILE_SCALE, TILE_SCALE, TILE_SCALE),
 				TILE_IN_GAME_SCALE, TileType.OTHER_WATER));
-
+//получить адрес картином и взять конкретное лекало .
 		tileMap = Utils.levelParser("res/lvl" + stage + ".lvl");
 		grassCords = new ArrayList<>();
 		for (int i = 0; i < tileMap.length; i++)
